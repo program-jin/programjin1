@@ -1,0 +1,199 @@
+# Retrying file creation for the final index.html with WhatsApp button.
+
+html_content = """<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jin4D | Akun Premium</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      background-image: url('https://media.giphy.com/media/A06UFEx8jxEwU/giphy.gif');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #33ff33;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    h1 {
+      color: #00ff00;
+      font-size: 36px;
+      text-shadow: 2px 2px 5px #000;
+    }
+    h2 {
+      color: #00ffff;
+      text-shadow: 1px 1px 3px #000;
+    }
+    p, li {
+      font-size: 16px;
+      line-height: 1.6;
+      text-shadow: 1px 1px 2px #000;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li::before {
+      content: "✔ ";
+      color: #00ff00;
+    }
+    form {
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px lime;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #1a1a1a;
+      color: #00ff00;
+    }
+    button {
+      background-color: #00ff00;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .cta {
+      color: red;
+      font-size: 20px;
+      text-align: center;
+      margin-top: 30px;
+      text-shadow: 1px 1px 2px #000;
+    }
+    .form-heading {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 40px;
+      color: #00ff00;
+    }
+    .logo-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .logo-container img {
+      max-width: 200px;
+      height: auto;
+    }
+
+    /* WhatsApp floating button styles (soft pulse, theme matched) */
+    .wa-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      background: rgba(0, 255, 136, 0.12); /* subtle background */
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .wa-float:hover {
+      transform: scale(1.06);
+    }
+    .wa-icon {
+      width: 34px;
+      height: 34px;
+      filter: drop-shadow(0 2px 6px rgba(0,255,136,0.12));
+    }
+    /* soft green pulse */
+    @keyframes waPulse {
+      0% { box-shadow: 0 0 0 0 rgba(0,255,136,0.15); }
+      70% { box-shadow: 0 0 0 10px rgba(0,255,136,0.03); }
+      100% { box-shadow: 0 0 0 0 rgba(0,255,136,0.00); }
+    }
+    .wa-float.pulse {
+      animation: waPulse 2.5s infinite ease-out;
+    }
+
+    /* responsive tweak: slightly smaller on small screens */
+    @media (max-width: 480px) {
+      .wa-float { width: 48px; height: 48px; right: 14px; bottom: 14px; }
+      .wa-icon { width: 30px; height: 30px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo-container">
+    <img src="https://i.imgur.com/2NQZQY5.png" alt="Logo Jin4D">
+  </div>
+
+  <h1>🎯 AKUN PREMIUM JIN4D: RASAKAN POWER-NYA!</h1>
+  <p style="text-align:center; color:#ccc; font-size:18px;">
+    Gak perlu jadi hacker buat menang besar. Di Jin4D, kamu bisa nikmati fitur akun eksklusif, bonus ekstra, dan jaminan pengalaman yang beda dari yang lain.
+  </p>
+
+  <h2>⚡ Fitur Unggulan Akun Premium:</h2>
+  <ul>
+    <li>🔐 Akses game dengan RTP lebih tinggi</li>
+    <li>🎁 Bonus harian khusus member premium</li>
+    <li>📊 Statistik bocoran angka (real-time, bukan tipu-tipu)</li>
+    <li>💸 Cashback mingguan hingga 15%</li>
+  </ul>
+
+  <h2>🤖 Kami Bukan Bandar Kaleng-Kaleng</h2>
+  <p>
+    Di Jin4D, kami transparan. Gak janji kosong, gak tipu-tipu. Setiap akun bisa dicek histori permainannya, dan customer service kami siaga 24/7. Karena buat kami, kepercayaan itu nomor satu.
+  </p>
+
+  <div class="form-heading">DAFTARKAN AKUN DENGAN PROGRAM YANG KAMU PILIH</div>
+  <form action="https://newjin9981.com/?content=register" method="get">
+    <label>Username:</label>
+    <input type="text" name="username" required>
+
+    <label>Nomor WhatsApp:</label>
+    <input type="text" name="whatsapp" required>
+
+    <label>Alamat Email:</label>
+    <input type="email" name="email" required>
+
+    <label>Pilih Program:</label>
+    <select name="program">
+      <option>--Pilih--</option>
+      <option>AUTO SCATTER</option>
+      <option>AUTO MENANG BESAR</option>
+      <option>AUTO x100 x1000</option>
+      <option>AUTO CONNECT SCATER HITAM</option>
+      <option>AUTO MAXWIN</option>
+    </select>
+
+    <button type="submit">🚀 DAFTAR SEKARANG</button>
+  </form>
+
+  <div class="cta">
+    🔥 Kesempatan Terbatas! 100 Akun Premium Pertama Dapat Bonus Spesial 🔥
+  </div>
+
+  <!-- WhatsApp floating button (soft pulse, icon only) -->
+  <a href="https://wa.me/6287833608954" target="_blank" class="wa-float pulse" aria-label="Chat via WhatsApp">
+    <img class="wa-icon" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
+</body>
+</html>
+"""
+
+path = "/mnt/data/index_with_whatsapp.html"
+with open(path, "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+path
+
