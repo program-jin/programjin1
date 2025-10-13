@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promo 7.7 MLBB | ReloadStation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .countdown {
+        font-variant-numeric: tabular-nums;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+    <div class="max-w-xl mx-auto p-6 text-center">
+      <!-- Banner -->
+      <div class="rounded-2xl overflow-hidden shadow-lg mb-6">
+        <img src="https://example.com/banner-mlbb.jpg" alt="Promo Banner" class="w-full" />
+      </div>
+
+      <!-- Judul -->
+      <h1 class="text-3xl md:text-4xl font-bold text-yellow-400 mb-3">Promo 7.7 MLBB 💎</h1>
+      <p class="text-lg md:text-xl text-gray-200 mb-6">
+        Diskon hingga <span class="text-pink-400 font-bold">50%</span> untuk top up Diamond Mobile Legends!<br />
+        Berlaku hanya hari ini – <strong>7 Juli</strong>.
+      </p>
+
+      <!-- Countdown -->
+      <div class="bg-gray-800 p-4 rounded-xl mb-6 inline-block">
+        <p class="text-sm text-gray-400 mb-1">Sisa Waktu Promo:</p>
+        <p id="countdown" class="text-2xl font-bold countdown text-green-400">--:--:--</p>
+      </div>
+
+      <!-- Tombol -->
+      <a
+        href="https://reloadstation.id/produk/mlbb"
+        target="_blank"
+        class="bg-pink-600 hover:bg-pink-700 transition text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg"
+      >
+        Top Up Sekarang
+      </a>
+
+      <!-- Footer -->
+      <footer class="text-xs text-gray-500 mt-10">
+        © 2025 ReloadStation. Semua hak dilindungi. Promo berakhir 7 Juli 2025 pukul 23:59 WIB.
+      </footer>
+    </div>
+
+    <!-- Countdown Script -->
+    <script>
+      const countdownEl = document.getElementById("countdown");
+      const deadline = new Date("2025-07-07T23:59:59+07:00").getTime();
+
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = deadline - now;
+
+        if (distance <= 0) {
+          countdownEl.textContent = "Promo Berakhir";
+          return;
+        }
+
+        const hours = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+        const minutes = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+        const seconds = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
+
+        countdownEl.textContent = `${hours}:${minutes}:${seconds}`;
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    </script>
+  </body>
+</html>
